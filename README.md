@@ -9,7 +9,7 @@
 **1.** Create a paper trading account on : **https://alpaca.markets/** and get the **key** and **secret key**. Change these values in the config file **config.py**. <br>
 **2.** Pull TimescaleDB image on docker : **docker run -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb:latest-pg12** <br>
 **3.** Execute an interactive bash : **docker exec -it bash** <br>
-**4.** Run a PostgresSQL interactive terminal : **psql -U postgres** <br>
+**4.** Run a PostgreSQL interactive terminal : **psql -U postgres** <br>
 **5.** Create the tables on PostgresSQL interactive terminal using the queries on **tables.sql**. <br>
 **6.** Populate the stock table using **stock.py**. <br>
 **7.** Populate the reddit table using **reddit.py**. <br>
