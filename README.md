@@ -1,6 +1,9 @@
 # Stocks
 **Tracking the change in value of the most talked about stocks in *wallstreetbets* in a given period.**
 
+## Requirements :
+**Docker Desktop**
+
 ## Instructions :
 
 **1.** Create a paper trading account on : **https://alpaca.markets/** and get the **key** and **secret key**. Change these values in the config file **config.py**. <br>
