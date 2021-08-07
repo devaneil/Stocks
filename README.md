@@ -24,3 +24,7 @@ This table will store the name of the stock, symbol of the stock and the exchang
 This table will store the time a post was posted, id of the stock, title of the post and link to the post. <br>
 **price** <br>
 This table will store the data of the stocks mentioned in the subreddit.
+
+## Output :
+
+![Plot](https://user-images.githubusercontent.com/51035563/128588346-7c13d545-b32f-4fb8-a2ec-3a63d2c62d77.jpg)
