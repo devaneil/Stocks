@@ -10,7 +10,7 @@
 **2.** Pull TimescaleDB image on docker : **docker run -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb:latest-pg12** <br>
 **3.** Execute an interactive bash : **docker exec -it bash** <br>
 **4.** Run a PostgreSQL interactive terminal : **psql -U postgres** <br>
-**5.** Create the tables on PostgresSQL interactive terminal using the queries on **tables.sql**. <br>
+**5.** Create the tables on PostgreSQL interactive terminal using the queries on **tables.sql**. <br>
 **6.** Populate the stock table using **stock.py**. <br>
 **7.** Populate the reddit table using **reddit.py**. <br>
 **8.** Populate the price table using **price.py**. <br>
