@@ -34,9 +34,20 @@ for row in rows:
 api = PushshiftAPI()
 
 # Setting the start and end date to get posts.
-start_date = int(dt.datetime(2021, 7, 30).timestamp())
-end_date = int(dt.datetime(2021, 8, 6).timestamp())
+""" End date """
+end = dt.date.today()
+end_month = int(end.strftime("%#m")) # Removing leading 0.
+end_day = int(end.strftime("%#d")) # Removing leading 0.
+""" Start date """
+start = end - dt.timedelta(days = 7)
+start_month = int(start.strftime("%#m")) # Removing leading 0.
+start_day = int(start.strftime("%#d")) # Removing leading 0.
 
+# Converting to Unix timestamp.
+start_date = int(dt.datetime(start.year, start_month, start_day).timestamp())
+end_date = int(dt.datetime(end.year, end_month, end_day).timestamp())
+
+# Getting the submissions in the subreddit.
 submissions = list(api.search_submissions(before = end_date,
                                          after = start_date,
                                          subreddit = 'wallstreetbets',
