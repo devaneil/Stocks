@@ -1,7 +1,6 @@
 import psycopg2
 import psycopg2.extras
 import config
-import pandas as pd
 import pandas.io.sql as sqlio
 import matplotlib.pyplot as plt
 
