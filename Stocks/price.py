@@ -4,6 +4,7 @@ import psycopg2.extras
 import config
 import io
 import sys
+import datetime as dt
 
 # For special characters encoding and decoding.
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'utf-8')
@@ -31,11 +32,17 @@ symbols = [] # List to store all the distinct symbols.
 for row in rows:
     symbols.append(row['symbol']) # Appending the symbol in the symbols list.
 
+""" Setting the start and end date """
+end = dt.date().today()
+end = str(end) # Date in yfinance history() takes date in string type.
+start = end - dt.timedelta(days = 7)
+start = str(start)
+
 # Getting stock data from yfinance.
 for symbol in symbols:
 
     ticker = yf.Ticker(symbol)
-    hist = ticker.history(start = '2021-07-30', end = '2021-08-06')
+    hist = ticker.history(start = start, end = end)
     hist.reset_index(level = 0, inplace = True)
 
     for i in range(len(hist)):
